@@ -1,7 +1,7 @@
 import screens.VentanaPrincipal;
 public class App {
     public static void main(String[] args) throws Exception {
-          
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Windows".equals(info.getName())) {
@@ -10,7 +10,7 @@ public class App {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error en el Look and Feel: " + e.getMessage());
         }
         VentanaPrincipal ventanaPrincipal = new VentanaPrincipal("Proyecto Escuela");
         ventanaPrincipal.setSize(500,500);
