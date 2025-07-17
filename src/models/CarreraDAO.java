@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+
 // CarreraDAO -> Contiene todos los métodos para interactuar
 // con la tabla Carreras de la base de datos.
 // Insert, Select, Update, Delete.
@@ -27,11 +28,10 @@ public class CarreraDAO {
             rows = stmt.executeUpdate();
 
         } catch (SQLException e){
-            e.printStackTrace();
+            System.out.println("Error al insertar carrera " + e.getMessage());
         }
 
-        return 0;
+        return rows;
 
     }
-    
 }
